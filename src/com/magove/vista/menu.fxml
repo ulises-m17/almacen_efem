@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" styleClass="contenedor_principal" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.magove.controlador.menu">
+   <children>
+      <ImageView fitHeight="118.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true" styleClass="opacidad_logo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../recursos/Magove%20(1).png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="12.0" layoutY="150.0" prefHeight="350.0" prefWidth="700.0" styleClass="contenedor_secundario" stylesheets="@../estilos/estilos.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lb_usuario" layoutX="8.0" layoutY="310.0" prefHeight="32.0" prefWidth="197.0" styleClass="textos" />
+            <HBox layoutX="53.0" layoutY="111.0" prefHeight="80.0" prefWidth="479.0" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="135.0">
+               <children>
+                  <JFXButton fx:id="btn_alta" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#ingreso_material" prefHeight="80.0" prefWidth="115.0" styleClass="botones" text="Ingreso">
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="ANGLE_DOUBLE_UP" size="40" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Ingreso de elementos al almacén" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_baja" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#salida_material" prefHeight="80.0" prefWidth="115.0" styleClass="botones" text="Salida">
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="ANGLE_DOUBLE_DOWN" size="40" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Salida de elementos del almacén" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_material" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#material" prefHeight="80.0" prefWidth="115.0" styleClass="botones" text="Elementos">
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="BRIEFCASE" size="40" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Programación de producción" />
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="522.0" layoutY="14.0" prefHeight="80.0" prefWidth="164.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btn_regresa" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#regresar" prefHeight="40.0" prefWidth="75.0" styleClass="botones" text="Regresar">
+               <graphic>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="ANGLE_DOUBLE_LEFT" size="40" />
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btn_salir" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#salir" prefHeight="40.0" prefWidth="75.0" styleClass="botones" text="Salir">
+               <graphic>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="TIMES_CIRCLE" size="40" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label layoutX="310.0" layoutY="42.0" prefHeight="32.0" prefWidth="80.0" styleClass="encabezados" text="Menú" />
+   </children>
+</AnchorPane>

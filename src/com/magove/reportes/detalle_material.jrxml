@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="afb40b39-915e-4493-a9de-e648007ba58c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="existencias" class="java.lang.String"/>
+	<field name="minimo" class="java.lang.String"/>
+	<field name="maximo" class="java.lang.String"/>
+	<field name="estatus" class="java.lang.String"/>
+	<field name="fecha_inicio" class="java.lang.String"/>
+	<field name="tiempo_reposicion" class="java.lang.String"/>
+	<field name="cantidad_fabricar" class="java.lang.String"/>
+	<field name="fecha_entrega" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<staticText>
+				<reportElement x="305" y="0" width="198" height="47" uuid="af1fd37d-6f72-483e-ab44-a8bb508e607c"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAGOVE S.A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="43" width="198" height="26" uuid="5fe5d491-87c5-47af-9b5a-ed489f2cdf49"/>
+				<textElement textAlignment="Center">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Soluciones industriales]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="80" width="555" height="2" uuid="239e6bf7-b3b6-4de8-bf66-7db8abd51660"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double" lineColor="#8E0000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="112" y="100" width="336" height="26" uuid="3c702251-6ceb-4966-a362-1f69de24c2ed"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de producción almacén EFEM]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="58" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="44" width="555" height="2" uuid="d3f4bd2d-03e4-401a-b8c1-b20a1f941128"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double" lineColor="#8E0000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="176" height="44" backcolor="#999999" uuid="18d311e7-3a8e-4cac-918b-258f1081038c"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="176" y="0" width="30" height="44" backcolor="#999999" uuid="9f066e17-c945-4c5e-9f86-81973191b9d4"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Existencias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="206" y="0" width="38" height="44" backcolor="#999999" uuid="0ab02b7c-cb8e-4aa5-9cc1-1e81e66b399f"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mínimo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="244" y="0" width="33" height="44" backcolor="#999999" uuid="13ba427d-1745-4d77-ab80-8d70c0556253"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="0" width="82" height="44" backcolor="#999999" uuid="fd695cd9-1544-4f8d-b462-8e0d7e0adcf0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estatus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="359" y="0" width="57" height="44" backcolor="#999999" uuid="ed05f96f-3581-4887-bbf0-0b8867c98c2e"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="416" y="0" width="32" height="44" backcolor="#999999" uuid="a3c28c19-1b50-4658-8ed2-0821908944e1"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Días de reposición]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="448" y="0" width="55" height="44" backcolor="#999999" uuid="6b052b04-c95b-4007-93b0-d5ae5a3e2170"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad por reponer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="503" y="0" width="61" height="44" backcolor="#999999" uuid="f6679816-b974-49a4-ad72-f7f48678db0f"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de entrega]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="177" height="20" uuid="04df6ee3-af63-4707-a99f-1cb75a449aa4"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="30" height="20" uuid="61ebc7c4-7023-484d-8246-d31abeacb10a"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{existencias}.valueOf($F{existencias})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="38" height="20" uuid="f56cba14-5a6d-4856-96d3-9e20e4857abc"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{minimo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="33" height="20" uuid="c29f2f04-1d19-4271-8500-c5ee157cf572"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="82" height="20" uuid="6d2b9a68-850f-4eb8-aacd-da6d78bc8e48"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="57" height="20" uuid="f1b01ca1-fa0b-40c1-9aa6-af5c730ec369"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_inicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="32" height="20" uuid="d46a7887-a083-4fb8-934d-63a03da58917"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiempo_reposicion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="55" height="20" uuid="08a69f36-9835-4a01-8b4e-74bfeffa3c3b"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad_fabricar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="0" width="61" height="20" uuid="5df2dbb4-81e6-4996-b4d5-eee2dc8378d0"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_entrega}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="206" y="34" width="80" height="20" uuid="affb251a-ba9a-47f9-89eb-ef0c7d4d2461"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="286" y="34" width="40" height="20" uuid="aa9ab476-8d61-4c25-aa83-f03fbf656539"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="416" y="34" width="139" height="20" uuid="ea6e4d58-6419-451e-aca2-6e7ae95054a8"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

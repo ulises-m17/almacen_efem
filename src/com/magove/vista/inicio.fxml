@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" styleClass="contenedor_principal" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.magove.controlador.Control_inicio">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="23.0" prefHeight="40.0" prefWidth="350.0" styleClass="encabezados" text="Control de almacén EFEM" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" />
+      <AnchorPane layoutX="14.0" layoutY="59.0" prefHeight="410.0" prefWidth="600.0" styleClass="contenedor_secundario" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <GridPane layoutX="86.0" layoutY="75.0" prefHeight="242.0" prefWidth="510.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="74.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="170.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="170.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="txt_usuario" focusColor="#8e0000" labelFloat="true" promptText="Usuario" styleClass="textos" unFocusColor="BLACK" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txt_contrasenia" focusColor="#8e0000" labelFloat="true" onAction="#Entra" promptText="Contraseña" styleClass="textos" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets top="15.0" />
+                     </GridPane.margin>
+                  </JFXPasswordField>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="USER" size="40" text="" wrappingWidth="38.0">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="70.0" />
+                     </GridPane.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="UNLOCK_ALT" size="40" stroke="#8e0000" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="70.0" top="15.0" />
+                     </GridPane.margin>
+                  </FontAwesomeIconView>
+                  <JFXButton fx:id="btn_ingreso" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#Entra" prefHeight="65.0" prefWidth="100.0" styleClass="botones" text="Entrar" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="35.0" top="30.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="CHECK" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_cancela" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#Cancela" prefHeight="71.0" prefWidth="100.0" styleClass="botones" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="35.0" top="30.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="CLOSE" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_salir" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#salir" prefHeight="65.0" prefWidth="100.0" styleClass="botones" text="Salir" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="35.0" top="30.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="TIMES_CIRCLE" size="35" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </GridPane>
+            <Separator layoutY="-2.0" opacity="0.56" prefHeight="5.0" prefWidth="600.0" styleClass="color_separador" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="88.0" fitWidth="86.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="opacidad_logo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../recursos/Magove%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

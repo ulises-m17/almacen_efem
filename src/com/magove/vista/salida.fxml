@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="753.0" styleClass="contenedor_principal" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.magove.controlador.Salida">
+   <children>
+      <AnchorPane layoutY="150.0" prefHeight="461.0" prefWidth="753.0" styleClass="contenedor_secundario" stylesheets="@../estilos/estilos.css" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <HBox layoutX="55.0" layoutY="62.0" prefHeight="47.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <JFXComboBox fx:id="cmb_tMaterial" focusColor="#8e0000" onAction="#ir_material" prefHeight="25.0" prefWidth="130.0" promptText="Tipo de elemento" styleClass="textos" unFocusColor="BLACK">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox fx:id="cmb_material" disable="true" focusColor="#8e0000" prefHeight="25.0" prefWidth="130.0" promptText="Elemento" styleClass="textos" unFocusColor="BLACK">
+                     <HBox.margin>
+                        <Insets left="113.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="txt_cantidad" focusColor="#8e0000" labelFloat="true" onKeyTyped="#numeros" prefHeight="25.0" prefWidth="130.0" promptText="Cantidad" styleClass="textos" unFocusColor="BLACK">
+                     <HBox.margin>
+                        <Insets left="113.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="122.0" prefHeight="67.0" prefWidth="188.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="122.0">
+               <children>
+                  <JFXButton fx:id="btn_guardar" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#guarda" prefHeight="76.0" prefWidth="77.0" styleClass="botones" text="Aceptar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="CHECK" size="40" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_cancela" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#cancela" prefHeight="76.0" prefWidth="77.0" styleClass="botones" text="Cancelar">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#8e0000" glyphName="CLOSE" size="40" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <TableView fx:id="tb_detalle" layoutX="14.0" layoutY="212.0" prefHeight="241.0" prefWidth="733.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <columns>
+                <TableColumn fx:id="c_material" prefWidth="218.0" text="Elemento" />
+                <TableColumn fx:id="c_existencias" prefWidth="83.0" text="Existencias" />
+                  <TableColumn fx:id="c_estatus" minWidth="0.0" prefWidth="92.0" text="Estatus" />
+                  <TableColumn fx:id="c_minimo" minWidth="0.0" prefWidth="54.0" text="Mínimo" />
+                  <TableColumn fx:id="c_maximo" minWidth="0.0" prefWidth="72.0" text="Máximo" />
+                  <TableColumn prefWidth="42.0" text="Reposición">
+                     <columns>
+                        <TableColumn fx:id="c_reposicion" maxWidth="200.0" minWidth="0.0" prefWidth="71.0" text="Días" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="c_pieza" maxWidth="166.0" minWidth="0.0" prefWidth="166.0" text="Elementos por fabricar" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btn_reportes" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="658.0" layoutY="152.0" onAction="#reportes" prefHeight="80.0" prefWidth="80.0" styleClass="botones" text="Reporte" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="122.0">
+               <graphic>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="BOOK" size="40" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="118.0" fitWidth="112.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="opacidad_logo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../recursos/Magove%20(1).png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="532.0" layoutY="24.0" prefHeight="80.0" prefWidth="164.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btn_regresa" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#regresar" prefHeight="40.0" prefWidth="75.0" styleClass="botones" text="Regresar">
+               <graphic>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="ANGLE_DOUBLE_LEFT" size="40" />
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btn_salir" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#salir" prefHeight="40.0" prefWidth="75.0" styleClass="botones" text="Salir">
+               <graphic>
+                  <FontAwesomeIconView fill="#8e0000" glyphName="TIMES_CIRCLE" size="40" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="196.0" layoutY="48.0" prefHeight="32.0" prefWidth="240.0" styleClass="encabezados" text="Salida de material" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" />
+   </children>
+</AnchorPane>
